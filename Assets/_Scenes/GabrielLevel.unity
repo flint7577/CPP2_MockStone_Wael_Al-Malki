@@ -378,6 +378,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -1158,6 +1159,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -1487,6 +1489,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -2529,6 +2532,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -3004,6 +3008,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4021,12 +4026,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d67ecfba88f446429ae0e21d61e7a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BeholderBehaviour
+  maxHealth: 50
   followRange: 80
   stopDistance: 0
   moveSpeed: 0
   turnSpeed: 4
   attackRange: 50
   attackCooldown: 1.2
+  attackDuration: 0.3
+  attackDamage: 10
+  attackRadius: 1.5
+  attackPoint: {fileID: 0}
+  damageableLayers:
+    serializedVersion: 2
+    m_Bits: 0
   patrolPoints: []
   patrolStopDistance: 1.2
   player: {fileID: 449274868}
@@ -4093,6 +4106,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -4638,12 +4652,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d67ecfba88f446429ae0e21d61e7a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BeholderBehaviour
+  maxHealth: 50
   followRange: 80
   stopDistance: 0
   moveSpeed: 0
   turnSpeed: 4
   attackRange: 50
   attackCooldown: 1.2
+  attackDuration: 0.3
+  attackDamage: 10
+  attackRadius: 1.5
+  attackPoint: {fileID: 0}
+  damageableLayers:
+    serializedVersion: 2
+    m_Bits: 0
   patrolPoints: []
   patrolStopDistance: 1.2
   player: {fileID: 449274868}
@@ -4710,6 +4732,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -5741,6 +5764,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -6058,6 +6082,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &983958880
 MeshFilter:
@@ -6161,6 +6186,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -6340,6 +6366,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -6488,6 +6515,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -6742,14 +6770,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034646703}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -6794,7 +6822,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -7406,6 +7434,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -8895,6 +8924,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -10358,6 +10388,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -11000,6 +11031,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -11153,6 +11185,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -11427,6 +11460,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -12204,12 +12238,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd21725468d385e42904d947429e4cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundEnemyPatrol
+  maxHealth: 50
   followRange: 12
   stopDistance: 1
   moveSpeed: 2
   turnSpeed: 2
   attackRange: 1
   attackCooldown: 1.2
+  attackDamage: 10
+  attackPoint: {fileID: 0}
+  attackRadius: 1
+  damageableLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDuration: 0.3
   patrolPoints:
   - {fileID: 1846583656}
   - {fileID: 616799559}
@@ -12259,6 +12301,12 @@ MonoBehaviour:
   player: {fileID: 449274868}
   anim: {fileID: 1872464100}
   maxHP: 50
+  attackDamage: 10
+  attackRange: 2
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackDelay: 2
 --- !u!1 &1876974142
 GameObject:
   m_ObjectHideFlags: 0
@@ -12480,12 +12528,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d67ecfba88f446429ae0e21d61e7a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BeholderBehaviour
+  maxHealth: 50
   followRange: 80
   stopDistance: 0
   moveSpeed: 0
   turnSpeed: 4
   attackRange: 50
   attackCooldown: 1.2
+  attackDuration: 0.3
+  attackDamage: 10
+  attackRadius: 1.5
+  attackPoint: {fileID: 0}
+  damageableLayers:
+    serializedVersion: 2
+    m_Bits: 0
   patrolPoints: []
   patrolStopDistance: 1.2
   player: {fileID: 449274868}
@@ -12552,6 +12608,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -12906,6 +12963,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -13054,6 +13112,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -13328,6 +13387,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -13640,6 +13700,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -13850,6 +13911,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -14203,6 +14265,63 @@ Transform:
   - {fileID: 1300023613}
   m_Father: {fileID: 878551644}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &663377805988213226
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3609110153234259363, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_Name
+      value: Pistol_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 279.58322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70240164
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.71178085
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504461521487266454, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9ab1037e17adc84689e6e8249a5d670, type: 3}
 --- !u!1001 &2152392886452029330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14388,3 +14507,4 @@ SceneRoots:
   - {fileID: 1344546860}
   - {fileID: 329413827}
   - {fileID: 1695932825}
+  - {fileID: 663377805988213226}
